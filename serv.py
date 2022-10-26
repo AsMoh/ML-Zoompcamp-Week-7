@@ -2,9 +2,9 @@ import bentoml
 from bentoml.io import JSON
 from bentoml.io import NumpyNdarray
 
-model_runner = bentoml.sklearn.get("mlzoomcamp_homework:jsi67fslz6txydu5").to_runner()
+model_runner = bentoml.sklearn.get("mlzoomcamp_homework:qtzdz3slg6mwwdu5").to_runner()
 
-svc = bentoml.Service("mlzoom2_classifier", runners=[model_runner])
+svc = bentoml.Service("mlzoom_classifier", runners=[model_runner])
 
 
 @svc.api(input=NumpyNdarray(), output=JSON())
